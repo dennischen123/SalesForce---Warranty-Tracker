@@ -1,0 +1,28 @@
+<!--
+  @File Name          : selector.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 6/3/2020, 1:23:02 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/3/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+<template>
+    <div class="wrapper">
+        <header>
+            <c-welcome warranties={warranties}></c-welcome>
+        </header>
+        <section class="content">
+            <div class="columns">
+                <main class="main">
+                    <c-warranty-list warranties={warranties} onsearched={handleSearch}></c-warranty-list>
+                </main>
+                <aside>
+
+                </aside>
+            </div>
+        </section>
+    </div>
+</template>

@@ -1,0 +1,43 @@
+<!--
+  @File Name          : warrantyList.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 6/3/2020, 2:54:59 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/1/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+
+<template>
+    <lightning-card title="Warranties" icon-name="utility:lock">
+        <div class="slds-card__body_inner">
+            <template if:true={warranties}>
+                <lightning-input type="search"
+                    onchange={handleSearchTermChange}
+                    variant="label-hidden"
+                    label="Search"
+                    class="slds-m-bottom_small"
+                    placeholder="Search for warranty"
+                    value={searchTerm}>
+                </lightning-input>
+                <lightning-layout multiple-rows="true" pull-to-boundary="small">
+                    <template for:each={warranties} for:item="warranty">
+                        <lightning-layout-item key={warranty.Id} size="3" class="slds-p-around_x-small">
+                            <c-warranty warranty={warranty}></c-warranty>
+                        </lightning-layout-item>
+                    </template>
+</lightning-layout>
+
+<template if:false={hasResults}>
+                <div class="slds-align_absolute-center slds-m-vertical_small">
+                    We did not find any warranties
+                </div>
+            </template>
+
+
+</template>
+</div>
+</lightning-card>
+</template>

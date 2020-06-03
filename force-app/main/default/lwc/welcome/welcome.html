@@ -1,0 +1,23 @@
+<!--
+  @File Name          : welcome.html
+  @Description        : 
+  @Author             : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Group              : 
+  @Last Modified By   : ChangeMeIn@UserSettingsUnder.SFDoc
+  @Last Modified On   : 6/3/2020, 12:28:33 PM
+  @Modification Log   : 
+  Ver       Date            Author      		    Modification
+  1.0    6/1/2020   ChangeMeIn@UserSettingsUnder.SFDoc     Initial Version
+-->
+
+<template>
+    <lightning-card icon-name="standard:account">
+        <div class="slds-m-around_medium">
+            <h2>Hello {firstName}!</h2>
+            <template if:true={warranties}>
+                <p>{warranties.length} Warranties</p>
+            </template>
+<!-- <a>Warranties Expiring This Month</a> -->
+</div>
+</lightning-card>
+</template>
